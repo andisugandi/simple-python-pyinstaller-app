@@ -15,7 +15,7 @@ pipeline {
             agent {
                 docker {
                     image 'qnib/pytest'
-                    args '-it --entrypoint=/bin/sh'
+                    args '-i --entrypoint='
                 }
             }
             steps {

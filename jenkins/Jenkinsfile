@@ -14,7 +14,8 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'python:3-alpine'
+                    image 'qnib/pytest'
+                    args '-it --entrypoint=/bin/bash'
                 }
             }
             steps {
